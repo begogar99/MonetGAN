@@ -20,3 +20,6 @@ Recall that while the dataset contained 7028 Photos, it only had 300 Monet Paint
 
 ### [Dual-Objective Discriminator]()
 In our implementation, we introduced a novel approach by splitting the discriminator into two heads, each with its own distinct loss function. This technique serves as a form of regularization for the discriminator, as it is now faced with two different objectives. This prevents the discriminator from simply memorizing the dataset and encourages it to provide more informative feedback to the generator. Theoretically, this setup enables the generator to improve its results by effectively fooling both heads of the discriminator. You can find our Kaggle submission [here](https://www.kaggle.com/code/garrettdevereux/uw-dc-d2cyclegan).
+
+### Research Materials
+The [paper](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_Paper.pdf) and [poster](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_Poster.pdf) for the final presentation of our project are available for access.
