@@ -18,6 +18,5 @@ Due to our interest in improving the evaluation of image quality produced by our
 ### [Differential Augmentation model]()
 Recall that while the dataset contained 7028 Photos, it only had 300 Monet Paintings. With such a low number of images from one of our domains, we focused on aiming to solve the problem of Data Efficient learning. The issue which such little data in one of the domains is that the discriminator is able to memorize the dataset. We introduced a Differential Augmentation block right before the Monet Discriminator. This takes in the Generated Monet and the Real Monet and performs random augmentations such as random changes in brightness, saturation, and contrast, as well as random translations and cutouts. By introducing these augmentations, memorization is prevented and the Discriminator is able to learn more valuable features that are then passed to the generator. You can find our Kaggle submission [here](https://www.kaggle.com/code/garrettdevereux/uw-deep-learning-diffaug-dc-cyclegan).
 
-
-
-
+### [Dual-Objective Discriminator]()
+In our implementation, we introduced a novel approach by splitting the discriminator into two heads, each with its own distinct loss function. This technique serves as a form of regularization for the discriminator, as it is now faced with two different objectives. This prevents the discriminator from simply memorizing the dataset and encourages it to provide more informative feedback to the generator. Theoretically, this setup enables the generator to improve its results by effectively fooling both heads of the discriminator. You can find our Kaggle submission [here](https://www.kaggle.com/code/garrettdevereux/uw-dc-d2cyclegan).
