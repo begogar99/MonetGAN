@@ -15,7 +15,7 @@ Subsequently, we utilized the official pre-trained CycleGAN model, specifically 
 ### [Industry model](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_Industry.ipynb)
 Due to our interest in improving the evaluation of image quality produced by our model, we began exploring the concept of Human eYe Perceptual Evaluation. This led us to delve deeper into NVIDIA’s StyleGAN with truncation architecture, known for its ability to achieve hyper-realistic results in HYPE. However, integrating the StyleGAN architecture into our already complex model proved to be a more challenging task than anticipated. Considering our limited time constraints, we made the decision to initially focus on implementing its Progressive Growth Mechanism. 
 
-### [ResNet Generators model] (https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_ResNetGenerators.ipynb)
+### [ResNet Generators model](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_ResNetGenerators.ipynb)
 To enhance our model's performance and generalization, we employed data augmentation, expanding the dataset with diverse examples through various image transformations. Additionally, we implemented ResNet generators, similar to the UNet generators used in our baseline. The key distinction is that ResNet generators use residual blocks with short skip connections, while UNet generators employ long skip connections from output concatenations. You can find our Kaggle submission [here](https://www.kaggle.com/code/deekshitadoli/notebooke0627ec9f2/notebook).
 
 ### Differential Augmentation model
