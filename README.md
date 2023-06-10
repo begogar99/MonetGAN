@@ -18,10 +18,10 @@ Due to our interest in improving the evaluation of image quality produced by our
 ### [ResNet Generators model](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_ResNetGenerators.ipynb)
 To enhance our model's performance and generalization, we employed data augmentation, expanding the dataset with diverse examples through various image transformations. Additionally, we implemented ResNet generators, similar to the UNet generators used in our baseline. The key distinction is that ResNet generators use residual blocks with short skip connections, while UNet generators employ long skip connections from output concatenations. You can find our Kaggle submission [here](https://www.kaggle.com/code/deekshitadoli/notebooke0627ec9f2/notebook).
 
-### Differential Augmentation model
+### [Differential Augmentation model](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_DifferentialAugmentation.ipynb)
 Recall that the dataset had 7028 photos but only 300 Monet paintings. To tackle the challenge of Data Efficient learning, we introduced a Differential Augmentation block before the Monet Discriminator. This block applies random augmentations to the Generated Monet and Real Monet images, preventing memorization by the discriminator. The augmentations include changes in brightness, saturation, and contrast, as well as translations and cutouts. This approach enables the Discriminator to learn more valuable features and pass them to the generator. You can find our Kaggle submission [here](https://www.kaggle.com/code/garrettdevereux/uw-deep-learning-diffaug-dc-cyclegan).
 
-### Dual-Objective Discriminator model
+### [Dual-Objective Discriminator model](https://github.com/begogar99/MonetGAN/blob/main/MonetGAN_DualObjectiveDiscriminator.ipynb)
 In our implementation, we devised a novel approach by splitting the discriminator into two heads, each with its own unique loss function. This technique serves as regularization for the discriminator, introducing two distinct objectives. By doing so, we prevent the discriminator from relying solely on memorization and encourage it to provide more informative feedback to the generator. Theoretically, this setup allows the generator to enhance its results by effectively deceiving both heads of the discriminator. You can find our Kaggle submission [here](https://www.kaggle.com/code/garrettdevereux/uw-dc-d2cyclegan).
 
 ### Research Materials
